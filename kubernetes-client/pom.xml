@@ -25,7 +25,7 @@
 
   <artifactId>kubernetes-client</artifactId>
   <packaging>jar</packaging>
-  <version>5.12.6-teamcity-patched</version>
+  <version>5.13.0-teamcity-patched</version>
   <name>Fabric8 :: Kubernetes :: Java Client</name>
 
   <properties>
