@@ -152,6 +152,14 @@ public class SettableBeanPropertyDelegate extends SettableBeanProperty.Delegatin
    * {@inheritDoc}
    */
   @Override
+  public SettableBeanProperty unwrapped(NameTransformer unwrapper) {
+    return _with(delegate.unwrapped(unwrapper));
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
   public void setObjectIdInfo(ObjectIdInfo objectIdInfo) {
     delegate.setObjectIdInfo(objectIdInfo);
   }
