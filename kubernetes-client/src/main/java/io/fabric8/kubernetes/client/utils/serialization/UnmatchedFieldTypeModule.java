@@ -59,7 +59,7 @@ public class UnmatchedFieldTypeModule extends SimpleModule {
       public BeanDeserializerBuilder updateBuilder(DeserializationConfig config, BeanDescription beanDesc,
           BeanDeserializerBuilder builder) {
         builder.getProperties().forEachRemaining(p -> builder.addOrReplaceProperty(
-            new SettableBeanPropertyDelegating(p, builder.getAnySetter(), UnmatchedFieldTypeModule.this::useAnySetter) {
+            new SettableBeanPropertyDelegate(p, builder.getAnySetter(), UnmatchedFieldTypeModule.this::useAnySetter) {
             }, true));
         return builder;
       }
