@@ -168,6 +168,7 @@ public class StorageStateList implements KubernetesResource, KubernetesResourceL
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

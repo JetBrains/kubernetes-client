@@ -168,6 +168,7 @@ public class PodMetricsList implements KubernetesResource, KubernetesResourceLis
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

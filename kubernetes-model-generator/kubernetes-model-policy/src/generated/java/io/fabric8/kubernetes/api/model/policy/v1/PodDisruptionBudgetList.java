@@ -168,6 +168,7 @@ public class PodDisruptionBudgetList implements KubernetesResource, KubernetesRe
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

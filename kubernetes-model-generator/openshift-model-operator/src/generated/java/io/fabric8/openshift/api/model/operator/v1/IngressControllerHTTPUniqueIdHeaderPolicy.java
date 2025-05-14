@@ -103,6 +103,7 @@ public class IngressControllerHTTPUniqueIdHeaderPolicy implements KubernetesReso
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

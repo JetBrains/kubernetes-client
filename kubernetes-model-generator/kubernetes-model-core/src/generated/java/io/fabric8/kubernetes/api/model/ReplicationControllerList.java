@@ -145,6 +145,7 @@ public class ReplicationControllerList implements KubernetesResource, Kubernetes
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

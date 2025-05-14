@@ -145,6 +145,7 @@ public class NodeList implements KubernetesResource, KubernetesResourceList<io.f
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

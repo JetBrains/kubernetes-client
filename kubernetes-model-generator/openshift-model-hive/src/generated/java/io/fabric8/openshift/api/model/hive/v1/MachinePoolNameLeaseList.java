@@ -168,6 +168,7 @@ public class MachinePoolNameLeaseList implements KubernetesResource, KubernetesR
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

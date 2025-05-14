@@ -168,6 +168,7 @@ public class ValidatingWebhookConfigurationList implements KubernetesResource, K
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

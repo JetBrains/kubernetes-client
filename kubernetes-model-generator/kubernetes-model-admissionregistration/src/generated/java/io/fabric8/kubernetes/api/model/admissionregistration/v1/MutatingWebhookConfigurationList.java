@@ -168,6 +168,7 @@ public class MutatingWebhookConfigurationList implements KubernetesResource, Kub
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

@@ -168,6 +168,7 @@ public class ConfigList implements KubernetesResource, KubernetesResourceList<io
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

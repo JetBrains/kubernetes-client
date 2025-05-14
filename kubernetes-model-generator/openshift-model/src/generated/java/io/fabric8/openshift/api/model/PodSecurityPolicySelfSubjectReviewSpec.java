@@ -87,6 +87,7 @@ public class PodSecurityPolicySelfSubjectReviewSpec implements KubernetesResourc
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

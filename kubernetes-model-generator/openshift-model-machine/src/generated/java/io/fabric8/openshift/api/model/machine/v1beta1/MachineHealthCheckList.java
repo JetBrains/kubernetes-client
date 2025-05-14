@@ -168,6 +168,7 @@ public class MachineHealthCheckList implements KubernetesResource, KubernetesRes
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

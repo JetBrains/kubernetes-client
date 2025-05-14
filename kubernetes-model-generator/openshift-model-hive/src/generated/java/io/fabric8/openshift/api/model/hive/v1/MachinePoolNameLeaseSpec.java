@@ -58,6 +58,7 @@ public class MachinePoolNameLeaseSpec implements KubernetesResource
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

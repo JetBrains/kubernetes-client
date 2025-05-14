@@ -168,6 +168,7 @@ public class DNSList implements KubernetesResource, KubernetesResourceList<io.fa
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

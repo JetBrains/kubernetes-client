@@ -166,6 +166,7 @@ public class SubjectRulesReview implements KubernetesResource, Namespaced
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

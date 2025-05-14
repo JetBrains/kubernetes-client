@@ -145,6 +145,7 @@ public class LimitRangeList implements KubernetesResource, KubernetesResourceLis
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

@@ -168,6 +168,7 @@ public class KubeControllerManagerList implements KubernetesResource, Kubernetes
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

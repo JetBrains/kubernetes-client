@@ -168,6 +168,7 @@ public class ProjectList implements KubernetesResource, KubernetesResourceList<i
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

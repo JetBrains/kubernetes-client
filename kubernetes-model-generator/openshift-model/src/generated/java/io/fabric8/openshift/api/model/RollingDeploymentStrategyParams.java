@@ -177,6 +177,7 @@ public class RollingDeploymentStrategyParams implements KubernetesResource
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

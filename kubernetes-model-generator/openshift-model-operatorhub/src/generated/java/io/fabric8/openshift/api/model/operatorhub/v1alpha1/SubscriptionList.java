@@ -168,6 +168,7 @@ public class SubscriptionList implements KubernetesResource, KubernetesResourceL
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

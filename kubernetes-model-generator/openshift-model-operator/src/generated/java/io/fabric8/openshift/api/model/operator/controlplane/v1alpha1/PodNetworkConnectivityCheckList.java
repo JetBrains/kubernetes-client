@@ -168,6 +168,7 @@ public class PodNetworkConnectivityCheckList implements KubernetesResource, Kube
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

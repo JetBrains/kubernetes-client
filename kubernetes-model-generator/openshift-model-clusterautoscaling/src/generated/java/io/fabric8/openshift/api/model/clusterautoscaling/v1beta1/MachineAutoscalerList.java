@@ -168,6 +168,7 @@ public class MachineAutoscalerList implements KubernetesResource, KubernetesReso
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

@@ -168,6 +168,7 @@ public class OpenShiftControllerManagerList implements KubernetesResource, Kuber
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

@@ -166,6 +166,7 @@ public class PodSecurityPolicySubjectReview implements KubernetesResource, Names
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

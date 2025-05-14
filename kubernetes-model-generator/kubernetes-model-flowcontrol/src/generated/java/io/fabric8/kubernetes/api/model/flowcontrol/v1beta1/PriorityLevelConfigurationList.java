@@ -168,6 +168,7 @@ public class PriorityLevelConfigurationList implements KubernetesResource, Kuber
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

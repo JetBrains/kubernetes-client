@@ -168,6 +168,7 @@ public class RoleBindingList implements KubernetesResource, KubernetesResourceLi
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

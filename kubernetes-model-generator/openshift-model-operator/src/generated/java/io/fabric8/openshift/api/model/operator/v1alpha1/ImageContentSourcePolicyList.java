@@ -168,6 +168,7 @@ public class ImageContentSourcePolicyList implements KubernetesResource, Kuberne
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

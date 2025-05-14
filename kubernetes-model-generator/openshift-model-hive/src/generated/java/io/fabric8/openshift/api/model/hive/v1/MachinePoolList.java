@@ -168,6 +168,7 @@ public class MachinePoolList implements KubernetesResource, KubernetesResourceLi
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

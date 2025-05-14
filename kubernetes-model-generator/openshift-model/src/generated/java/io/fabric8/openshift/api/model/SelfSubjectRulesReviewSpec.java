@@ -90,6 +90,7 @@ public class SelfSubjectRulesReviewSpec implements KubernetesResource
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

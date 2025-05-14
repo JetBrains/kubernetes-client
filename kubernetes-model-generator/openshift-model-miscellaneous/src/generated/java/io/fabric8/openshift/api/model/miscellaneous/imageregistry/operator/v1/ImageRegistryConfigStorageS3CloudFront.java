@@ -135,6 +135,7 @@ public class ImageRegistryConfigStorageS3CloudFront implements KubernetesResourc
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

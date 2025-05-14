@@ -168,6 +168,7 @@ public class ImageTagList implements KubernetesResource, KubernetesResourceList<
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }

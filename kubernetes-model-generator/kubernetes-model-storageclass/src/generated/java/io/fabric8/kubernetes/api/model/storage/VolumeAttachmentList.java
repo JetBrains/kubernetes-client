@@ -168,6 +168,7 @@ public class VolumeAttachmentList implements KubernetesResource, KubernetesResou
     }
 
     @JsonAnyGetter
+    @JsonIgnore
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
     }
