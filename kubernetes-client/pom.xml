@@ -51,7 +51,7 @@
     <useIncrementalCompilation>false</useIncrementalCompilation>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <kubernetes-client.version>5.12.4</kubernetes-client.version>
+    <kubernetes-client.version>5.14.0-teamcity-patched</kubernetes-client.version>
     <!-- Core versions -->
     <sundrio.version>0.50.3</sundrio.version>
     <okhttp.version>4.12.0</okhttp.version>
