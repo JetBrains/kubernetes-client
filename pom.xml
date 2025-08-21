@@ -63,15 +63,9 @@
   </scm>
 
   <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <name>Sonatype OSS Repository (Snapshots)</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
     <repository>
-      <id>ossrh</id>
-      <name>Sonatype OSS Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>jetbrains.teamcity.repo</id>
+      <url>ftp://download.labs.intellij.net</url>
     </repository>
   </distributionManagement>
 
@@ -1068,6 +1062,13 @@
         </executions>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ftp</artifactId>
+        <version>2.10</version>
+      </extension>
+    </extensions>
   </build>
 
   <profiles>
@@ -1304,6 +1305,7 @@
             </executions>
           </plugin>
         </plugins>
+
       </build>
     </profile>
   </profiles>
