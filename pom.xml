@@ -178,7 +178,6 @@
     <module>extensions</module>
     <module>openshift-server-mock</module>
     <module>kubernetes-examples</module>
-    <module>platforms</module>
     <module>kubernetes-tests</module>
     <module>uberjar</module>
     <module>crd-generator</module>
