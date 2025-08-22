@@ -175,7 +175,6 @@
     <module>kubernetes-client</module>
     <module>kubernetes-server-mock</module>
     <module>extensions</module>
-    <module>kubernetes-examples</module>
     <module>kubernetes-tests</module>
     <module>crd-generator</module>
   </modules>
