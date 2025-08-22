@@ -174,12 +174,9 @@
     <module>kubernetes-model-generator</module>
     <module>kubernetes-client</module>
     <module>kubernetes-server-mock</module>
-    <module>openshift-client</module>
     <module>extensions</module>
-    <module>openshift-server-mock</module>
     <module>kubernetes-examples</module>
     <module>kubernetes-tests</module>
-    <module>uberjar</module>
     <module>crd-generator</module>
   </modules>
 
@@ -1028,7 +1025,6 @@
                   <include>io.fabric8:kubernetes-model-policy*</include>
                   <include>io.fabric8:kubernetes-model-scheduling*</include>
                   <include>io.fabric8:kubernetes-model-storageclass*</include>
-                  <include>io.fabric8:openshift-model*</include>
                 </includes>
               </dependencies>
               <properties>
