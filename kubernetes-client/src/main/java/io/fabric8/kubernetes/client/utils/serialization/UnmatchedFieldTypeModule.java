@@ -26,6 +26,7 @@ import com.fasterxml.jackson.databind.ser.BeanPropertyWriter;
 import com.fasterxml.jackson.databind.ser.BeanSerializerBuilder;
 import com.fasterxml.jackson.databind.ser.BeanSerializerModifier;
 
+import java.lang.reflect.Member;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -68,12 +69,13 @@ public class UnmatchedFieldTypeModule extends SimpleModule {
       public BeanSerializerBuilder updateBuilder(SerializationConfig config, BeanDescription beanDesc,
           BeanSerializerBuilder builder) {
         AnnotatedMember anyGetter = beanDesc.findAnyGetter();
+        Member anyGetterMember = (anyGetter != null) ? anyGetter.getMember() : null;
 
         List<BeanPropertyWriter> originalWriters = builder.getProperties();
 
         List<BeanPropertyWriter> newWriters = originalWriters.stream()
             .map(writer -> {
-              if ("additionalProperties".equals(writer.getName())) {
+              if (isAnyGetterWriter(writer, anyGetterMember)) {
                 return writer;
               }
               return new BeanPropertyWriterDelegate(writer, anyGetter, UnmatchedFieldTypeModule.this::isLogWarnings);
@@ -84,6 +86,25 @@ public class UnmatchedFieldTypeModule extends SimpleModule {
         return builder;
       }
     });
+  }
+
+  /**
+   * Checks whether the given {@link BeanPropertyWriter} corresponds to the method annotated with {@code @JsonAnyGetter}.
+   *
+   * This is used to identify and exclude the any-getter property from custom wrapping,
+   * since Jackson handles it separately via {@link com.fasterxml.jackson.databind.ser.AnyGetterWriter}.
+   *
+   * @param writer the property writer to examine
+   * @param anyGetterMember the reflective member (method or field) marked with {@code @JsonAnyGetter}, if available
+   * @return {@code true} if the writer represents the any-getter property; {@code false} otherwise
+   */
+  private boolean isAnyGetterWriter(BeanPropertyWriter writer, Member anyGetterMember) {
+    if (writer == null || anyGetterMember == null) {
+      return false;
+    }
+    AnnotatedMember annotated = writer.getMember();
+    Member member = (annotated != null) ? annotated.getMember() : null;
+    return member != null && member.equals(anyGetterMember);
   }
 
   boolean isLogWarnings() {
