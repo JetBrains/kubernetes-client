@@ -21,7 +21,7 @@
   <parent>
     <artifactId>kubernetes-extensions</artifactId>
     <groupId>io.fabric8</groupId>
-    <version>5.15.0-teamcity-patched</version>
+    <version>5.16.0-teamcity-patched</version>
   </parent>
 
   <artifactId>service-catalog</artifactId>

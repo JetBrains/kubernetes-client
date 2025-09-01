@@ -23,7 +23,7 @@
   <parent>
     <groupId>io.fabric8</groupId>
     <artifactId>kubernetes-model-generator</artifactId>
-    <version>5.15.0-teamcity-patched</version>
+    <version>5.16.0-teamcity-patched</version>
   </parent>
 
   <artifactId>kubernetes-model-storageclass</artifactId>
